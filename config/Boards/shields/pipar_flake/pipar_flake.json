@@ -1,0 +1,50 @@
+{
+  "id": "pipar_flake",
+  "name": "Pipar Flake",
+  "vendor": "koit.dev",
+  "website": "https://github.com/your_repo",
+  "board": "nice_nano_v2",
+  "layouts": {
+    "default_layout": {
+      "name": "Default",
+      "layout": [
+        {"row": 0, "col": 0, "x": 0, "y": 0, "label": "Q"},
+        {"row": 0, "col": 1, "x": 1, "y": 0, "label": "W"},
+        {"row": 0, "col": 2, "x": 2, "y": 0, "label": "E", "type": "encoder"},
+
+        {"row": 1, "col": 0, "x": 0, "y": 1, "label": "A"},
+        {"row": 1, "col": 1, "x": 1, "y": 1, "label": "S"},
+        {"row": 1, "col": 2, "x": 2, "y": 1, "label": "D"},
+
+        {"row": 2, "col": 0, "x": 0, "y": 2, "label": "Z"},
+        {"row": 2, "col": 1, "x": 1, "y": 2, "label": "X"},
+        {"row": 2, "col": 2, "x": 2, "y": 2, "label": "FN"}
+      ]
+    }
+  },
+  "sensors": [
+    {
+      "type": "rotary_encoder",
+      "name": "encoder_1",
+      "row": 0,
+      "col": 2,
+      "pin_a": 5,
+      "pin_b": 6,
+      "behavior": {
+        "rotation": {
+          "clockwise": "VOL_UP",
+          "counterclockwise": "VOL_DN"
+        },
+        "press": "E"
+      },
+      "triggers_per_rotation": 24
+    }
+  ],
+  "features": {
+    "bluetooth": true,
+    "encoder": true,
+    "backlight": true,
+    "rgb": false,
+    "display": true
+  }
+}

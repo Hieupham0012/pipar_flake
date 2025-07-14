@@ -1,0 +1,12 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_PIPAR_FLAKE
+
+config ZMK_KEYBOARD_NAME
+	default "Pipar Flake"
+
+config ZMK_USB_LOGGING
+	default y
+
+endif

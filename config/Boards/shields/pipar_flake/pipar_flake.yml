@@ -1,0 +1,19 @@
+file_format: "1"
+id: pipar_flake
+name: PiparFlake
+type: shield
+url: https://github.com/RasmusKoit/pipar
+requires: [nice_nano_v2]  # Đã đổi từ pro_micro sang nice_nano_v2
+exposes: [i2c_oled]
+features:
+  - keys
+  - display:
+      enabled: true
+      type: oled
+  - encoder:
+      enabled: true
+      type: ec11
+  - backlight:
+      enabled: true
+      type: pwm
+  - bluetooth
