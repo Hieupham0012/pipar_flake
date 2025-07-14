@@ -2,7 +2,7 @@ name: Build ZMK Firmware
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -14,10 +14,7 @@ jobs:
         with:
           submodules: recursive
           path: zmk
-- name: Verify ZMK Structure
-  run: |
-    ls -la zmk/app
-    ls -la zmk/.west
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -35,7 +32,7 @@ jobs:
       - name: Initialize ZMK Workspace
         working-directory: ./zmk
         run: |
-          west init -l app/
+          [ -f "app/west.yml" ] || west init -l app/
           west update
           west zephyr-export
 
