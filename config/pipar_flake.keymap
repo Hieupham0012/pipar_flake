@@ -29,7 +29,7 @@
 
             display-name = "default";
             bindings = <
-&kp Q  &kp B  &kp E
+&kp Q  &kp C  &kp E
 &kp A  &kp S  &kp D
 &kp Z  &kp X  &mo 1
             >;
