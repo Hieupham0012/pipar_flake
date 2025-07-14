@@ -14,7 +14,10 @@ jobs:
         with:
           submodules: recursive
           path: zmk
-
+- name: Verify ZMK Structure
+  run: |
+    ls -la zmk/app
+    ls -la zmk/.west
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
